@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: authentication-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authentication
+    username: postgres # Talvez precise ser alterado.
+    password: root # Talvez precise ser alterada.
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # Cria e atualiza automagicamente as tabelas no banco de dados.
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# Configuração de segurança (exemplo básico com Spring Security)
+security:
+  basic:
+    enabled: true # Habilita autenticação básica. Pode ser ajustado conforme a necessidade.
+
+# Outras configurações podem ser adicionadas aqui no futuro.
